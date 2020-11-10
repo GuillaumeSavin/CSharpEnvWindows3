@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="EnvWindows3.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EnvWindows3"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="Principal">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <RadioButton Grid.Row="0" Grid.Column="0" x:Name="RadioHomme" Content="Homme" GroupName="Sexe" HorizontalAlignment="Left" VerticalAlignment="Top" Checked="Sexe_Changed"/>
+        <RadioButton Grid.Row="0" Grid.Column="1" x:Name="RadioFemme" Content="Femme" GroupName="Sexe" HorizontalAlignment="Right" VerticalAlignment="Top" Checked="Sexe_Changed"/>
+        <RadioButton Grid.Row="1" Grid.Column="0" x:Name="RadioMineur" Content="Mineur" GroupName="Age" HorizontalAlignment="Left" VerticalAlignment="Bottom" Checked="Age_Changed"/>
+        <RadioButton Grid.Row="1" Grid.Column="1" x:Name="RadioMajeur" Content="Majeur" GroupName="Age" HorizontalAlignment="Right" VerticalAlignment="Bottom" Checked="Age_Changed"/>
+        <Button Grid.Row="2" Grid.Column="0" x:Name="Valider" Content="Valider" Click="BoutonValider_Click"/>
+    </Grid>
+    
+</Page>
